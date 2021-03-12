@@ -1,10 +1,10 @@
 
 
-export function setFruits (fruits) {
+export function setPlants (plants) {
   
 }
 
-export function fetchFruits () {
+export function fetchPlants() {
  
   
 }
