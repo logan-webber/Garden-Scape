@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { getPlantById } from '../../server/db/plants'
-import { connect } from '../../server/routes/plants'
+import { connect } from 'react-redux'
 
 import { getThePlantById } from '../apis/plants'
 
@@ -12,7 +11,7 @@ function SinglePlant(props)  {
 
     const findMeThePlant = () => {
         if(plantId){
-            getPlantById(plantId)
+            getThePlantById(plantId)
             .then(singPlant => {
                 setThePlant(singPlant)
             })
