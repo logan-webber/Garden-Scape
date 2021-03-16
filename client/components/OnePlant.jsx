@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { getPlantById } from '../../server/db/plants'
+import { connect } from '../../server/routes/plants'
 
 import { getThePlantById } from '../apis/plants'
 
@@ -27,8 +28,17 @@ function SinglePlant(props)  {
             {thePlant && (
                 <>  
                     <h1>Here is one of many cool plants</h1>
+                    <p className='plant-text'>{thePlant.species}</p>
                 </>
             )}
         </>
     )
 }
+
+function mapStateToProps(globalState) {
+	return {
+		plants: globalState.plants
+	}
+}
+
+export default connect(mapStateToProps)(SinglePlant)
