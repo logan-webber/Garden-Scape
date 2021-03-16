@@ -9,6 +9,9 @@ export function getPlants() {
     })
 }
 
-export function getThePlantById(){
-    
+export function getThePlantById(id){
+    return request.get(rootUrl +'/plants/' + id)
+    .then(res => {
+        return res.body
+    })
 }
