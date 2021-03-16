@@ -16,4 +16,17 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res) => {
+  plantId = req.params.id
+  db.getPlantById(plantId)
+  .then(results => {
+    res.json(results)
+    return null
+  })
+  .catch(err => {
+    console.log(err)
+    res.status(500).json({ message: 'REEEEEEEEEEEEE' })
+  })
+})
+
 module.exports = router

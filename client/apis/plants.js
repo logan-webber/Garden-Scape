@@ -8,3 +8,7 @@ export function getPlants() {
         return res.body
     })
 }
+
+export function getThePlantById(){
+    
+}
