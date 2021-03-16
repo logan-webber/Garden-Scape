@@ -13,6 +13,7 @@ function App () {
 			<Router>
 				<Route path='/' exact component={Home}/>
 				<Route path='/listofplants' exact component={ListOfPlants}/>
+				<Route path='/'
 			</Router>
     </>
   )

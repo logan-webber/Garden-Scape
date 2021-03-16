@@ -1,5 +1,7 @@
 import { SET_PLANTS } from '../actions/index'
 
+// , GET_ONE_PLANT
+
 const initialState = []
 
 const reducer = (state = initialState, action) => {
