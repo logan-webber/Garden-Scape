@@ -1,35 +1,37 @@
 import React, {useState, useEffect} from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
-import { getThePlantById } from '../apis/plants'
+import { getPlants, getThePlantById } from '../apis/plants'
 
 function SinglePlant(props) {
 
-    const [thePlant, setThePlant] = useState([])
+    //  useEffect(() => {
+    //     getPlants()
+    // }, [])
 
-    const plantId = props.match.params.id
+    const [thePlant, setThePlant] = useState(null)
 
+    
     const findMeThePlant = () => {
-        if(plantId){
-            getThePlantById(plantId)
-            .then(singPlant => {
-                setThePlant(singPlant)
-            })
-        }
-    }
+                    setThePlant(props.plants.find(plnt => plnt.id == props.match.params.id))
+                }
+                
+                const plantId = props.match.params.id
 
     useEffect(() => {
         findMeThePlant()
-    }, [props.match.params.id])
+    }, [props.match.params.id, props.plants])
 
     return(
         <>
             {thePlant && (
                 <>  
                     <h1>Here is one of many cool plants</h1>
-                    <p className='plant-text'>{thePlant.species}</p>
+                    <p>{thePlant.species}</p>
                 </>
-            )}
+             )} 
+            <Link to='/listofplants'>back</Link>
         </>
     )
 }

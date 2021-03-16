@@ -1,13 +1,18 @@
 import React, { useEffect } from 'react'
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 import ListOfPlants from './ListOfPlants'
 import OnePlant from './OnePlant'
 import Home from './Home'
 import { HashRouter as Router, Route } from 'react-router-dom'
+import { fetchPlants } from '../actions/index'
 
 
 
-function App () {
+function App (props) {
+
+	useEffect(() => {
+		props.dispatch(fetchPlants())
+}, [])
   
   return (
     <>
@@ -20,5 +25,11 @@ function App () {
   )
 }
 
-export default App
+function mapStateToProps(globalState) {
+	return {
+		plants: globalState.plants
+	}
+}
+
+export default connect(mapStateToProps)(App)
 
