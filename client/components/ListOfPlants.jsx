@@ -14,7 +14,7 @@ function ListOfPlants (props){
 				<ul className='list'>
 					{props.plants.map(plnt =>
 					<li key={plnt.id}>
-						{plnt.species}
+						<Link to={`/oneplant/${plnt.id}`}>{plnt.species}</Link>
 					</li>)}
 				</ul>
 			</>

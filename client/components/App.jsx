@@ -14,7 +14,7 @@ function App () {
 			<Router>
 				<Route path='/' exact component={Home}/>
 				<Route path='/listofplants' exact component={ListOfPlants}/>
-				<Route path='/' exact component={OnePlant}/>
+				<Route path='/oneplant/:id' exact component={OnePlant}/>
 			</Router>
     </>
   )

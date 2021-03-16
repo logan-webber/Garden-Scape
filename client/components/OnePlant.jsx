@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { getThePlantById } from '../apis/plants'
 
-function SinglePlant(props)  {
+function SinglePlant(props) {
 
     const [thePlant, setThePlant] = useState([])
 
