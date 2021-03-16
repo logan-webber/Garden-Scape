@@ -13,7 +13,7 @@ export function fetchPlants() {
     return dispatch => {
         return getPlants()
         .then(plants => {
-          dispatch(setWords(plants))
+          dispatch(setPlants(plants))
           return null
         })
       }

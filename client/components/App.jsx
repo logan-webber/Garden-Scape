@@ -1,20 +1,17 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import ListOfPlants from './ListOfPlants'
 
 
 
-const App = (props) => {
+function App () {
   
   return (
     <>
-      
+      <ListOfPlants/>
     </>
   )
 }
-const mapStateToProps = (globalState) => {
-  return {
-    
-  }
-}
 
-export default connect(mapStateToProps)(App)
+export default App
+
