@@ -1,4 +1,4 @@
-import { getPlants } from '../apis/plants'
+import { getPlants, getThePlantById } from '../apis/plants'
 
 export const SET_PLANTS = 'SET_PLANTS'
 export const GET_ONE_PLANT = 'GET_ONE_PLANT'
@@ -21,7 +21,11 @@ export function fetchPlants() {
 }
 
 export function getOnePlant (plants, id) {
-  return {
-    
+  return dispatch => {
+    return getThePlantById(id)
+    .then(plants => {
+      dispatch(setPlants(plants))
+      return null
+    })
   }
 }
