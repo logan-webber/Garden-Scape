@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { getPlants, getThePlantById } from '../apis/plants'
+// import { getPlants, getThePlantById } from '../apis/plants'
 
 function SinglePlant(props) {
 

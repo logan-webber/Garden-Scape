@@ -1,7 +1,5 @@
 import { SET_PLANTS, ADD_PLANTS,  } from '../actions/index'
 
-// , GET_ONE_PLANT
-
 const initialState = []
 
 const reducer = (state = initialState, action) => {
@@ -10,7 +8,7 @@ const reducer = (state = initialState, action) => {
         console.log(action.plants)
         return action.plants
     case ADD_PLANTS:
-      return 
+        return [...state, {id: action.id, species: action.species, typeOf: action.typeOf, origin: action.origin, humidity: action.humidity, temprature: action.temprature, climate: action.climate }]
     default:
         return state
   }
