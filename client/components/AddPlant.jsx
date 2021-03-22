@@ -7,7 +7,7 @@ function AddPlant(props) {
 
 	const [formData, setFormData] = useState({
 		species: '',
-		typeof: '',
+		typeOf: '',
 		origin: '',
 		humidity: '',
 		temprature: '',
@@ -16,7 +16,7 @@ function AddPlant(props) {
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		props.dispatch(addOnePlant({ species: formData.species, typeof: formData.origin, origin: formData.origin, humidity: formData.humidity, temprature: formData.temprature, climate: formData.climate  }))
+		props.dispatch(addOnePlant({ species: formData.species, typeOf: formData.typeOf, origin: formData.origin, humidity: formData.humidity, temprature: formData.temprature, climate: formData.climate  }))
 		console.log('submitted data')
 	}
 
