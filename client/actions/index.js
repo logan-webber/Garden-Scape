@@ -20,11 +20,11 @@ export function fetchPlants() {
       }
 }
 
-export function addOnePlant() {
+export function addOnePlant(plant) {
   return dispatch => {
-    return addThePlant()
-    .then(plants => {
-      dispatch(setPlants(plants))
+    return addThePlant(plant)
+    .then(() => {
+      dispatch(fetchPlants())
       return null
     })
   }

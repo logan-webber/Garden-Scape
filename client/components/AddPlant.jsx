@@ -35,12 +35,12 @@ function AddPlant(props) {
 		<>
 			<form onSubmit={handleSubmit}>
 				<label>
-					<input className='newPlant' type=' text' name='species' placeholder='species' onChange={(e) => handleChange(e)}/>
+					<input className='newPlant' type='text' name='species' placeholder='species' onChange={(e) => handleChange(e)}/>
 					<input className='newPlant' type=' text' name='typeOf' placeholder='typeOf' onChange={(e) => handleChange(e)} />
-					<input className='newPlant' type=' text' name='origin' placeholder='origin' onChange={(e) => handleChange(e)} />
-					<input className='newPlant' type=' text' name='humidity' placeholder='humidity' onChange={(e) => handleChange(e)} />
-					<input className='newPlant' type=' text' name='temprature' placeholder='temprature' onChange={(e) => handleChange(e)} />
-					<input className='newPlant' type=' text' name='climate' placeholder='climate' onChange={(e) => handleChange(e)} />
+					<input className='newPlant' type='text' name='origin' placeholder='origin' onChange={(e) => handleChange(e)} />
+					<input className='newPlant' type='text' name='humidity' placeholder='humidity' onChange={(e) => handleChange(e)} />
+					<input className='newPlant' type='text' name='temprature' placeholder='temprature' onChange={(e) => handleChange(e)} />
+					<input className='newPlant' type='text' name='climate' placeholder='climate' onChange={(e) => handleChange(e)} />
 				</label>
 				<button type='submit'>Submit</button>
 			</form>
