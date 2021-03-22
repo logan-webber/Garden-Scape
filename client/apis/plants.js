@@ -16,8 +16,9 @@ export function getThePlantById(id){
     })
 }
 
-export function addThePlant(plant){
+export function addThePlant(plants){
     return request.post(rootUrl + '/plants')
+    .send(plants)
     .then(res => {
         return res.body
     })

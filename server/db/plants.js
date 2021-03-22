@@ -8,7 +8,7 @@ function getPlantById (id, db = connection){
     return db('plants').select().where('id', id)
 }
 
-function addPlant (plant, db = connecttion){
+function addPlant (plant, db = connection){
     return db('plants').insert(plant)
         .then(ids => ids[0])
 }

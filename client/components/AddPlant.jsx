@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { addOnePlant } from '../actions/index'
+import { Link } from 'react-router-dom'
 
 function AddPlant(props) {
 
@@ -20,9 +21,7 @@ function AddPlant(props) {
 	}
 
 	const handleChange = (e) => {
-		//this function below keeps the event around so that the handlechange func can use it
-		//I ended up not needing to use it since my packages were out of date and after an npm i it worked again
-		// e.persist()
+		e.persist()
 		setFormData(currentFormData => {
 			console.log(e)
 			return {
@@ -45,6 +44,7 @@ function AddPlant(props) {
 				</label>
 				<button type='submit'>Submit</button>
 			</form>
+			<Link to='/'>back</Link>
 		</>
 	)
 }
