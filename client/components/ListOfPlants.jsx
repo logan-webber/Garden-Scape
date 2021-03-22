@@ -12,6 +12,7 @@ function ListOfPlants (props){
 						<Link to={`/oneplant/${plnt.id}`}>{plnt.species}</Link>
 					</li>)}
 				</ul>
+				<Link to='/'>back</Link>
 			</>
 	)
 	}

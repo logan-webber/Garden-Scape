@@ -1,4 +1,4 @@
-import { SET_PLANTS } from '../actions/index'
+import { SET_PLANTS, ADD_PLANTS,  } from '../actions/index'
 
 // , GET_ONE_PLANT
 
@@ -9,6 +9,8 @@ const reducer = (state = initialState, action) => {
     case SET_PLANTS:
         console.log(action.plants)
         return action.plants
+    case ADD_PLANTS:
+      return 
     default:
         return state
   }

@@ -28,7 +28,13 @@ function SinglePlant(props) {
 			{thePlant && (
 				<>
 					<h1>Here is one of many cool plants</h1>
-					<p>{thePlant.species}</p>
+					<p>Species: {thePlant.species}</p>
+					<p>Type: {thePlant.typeOf}</p>
+					<p>Countries of origin: {thePlant.origin}</p>
+					<p>Humidity range: {thePlant.humidity}</p>
+					<p>Temprature range: {thePlant.temprature}</p>
+					<p>Ideal climate: {thePlant.climate}</p>
+
 				</>
 			)}
 			<Link to='/listofplants'>back</Link>
