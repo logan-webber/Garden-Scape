@@ -18,6 +18,7 @@ function AddPlant(props) {
 		e.preventDefault()
 		props.dispatch(addOnePlant({ species: formData.species, typeOf: formData.typeOf, origin: formData.origin, humidity: formData.humidity, temprature: formData.temprature, climate: formData.climate  }))
 		console.log('submitted data')
+		routeChange()
 	}
 
 	const history = useHistory()
@@ -49,8 +50,10 @@ function AddPlant(props) {
 					<input className='newPlant' type='text' name='temprature' placeholder='temprature' onChange={(e) => handleChange(e)} />
 					<input className='newPlant' type='text' name='climate' placeholder='climate' onChange={(e) => handleChange(e)} />
 				</label>
-				<button onClick={() => routeChange()} type='submit'>Submit</button>
+				<button type='submit'>Submit</button>
 				
+{/* onClick={() => routeChange() */}
+
 			</form>
 			<Link to='/'>back</Link>
 		</>
