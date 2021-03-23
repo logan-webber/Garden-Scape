@@ -31,10 +31,12 @@ export function addOnePlant(plant) {
   }
 }
 
-export function deleteOnePlant(id)
+export function deleteOnePlant(id){
   return dispatch => {
     return deleteThePlant(id)
     .then(() => {
       dispatch(fetchPlants())
       return null
-    })}
+    })
+  }
+}
