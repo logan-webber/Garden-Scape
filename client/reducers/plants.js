@@ -10,7 +10,7 @@ const reducer = (state = initialState, action) => {
     case ADD_PLANTS:
         return [...state, {id: action.id, species: action.species, typeOf: action.typeOf, origin: action.origin, humidity: action.humidity, temprature: action.temprature, climate: action.climate }]
     case DELETE_PLANTS:
-      return state.map(word => word.id === action.id)
+      return state.map(plant => plant.id === action.id)
     default:
         return state
   }
