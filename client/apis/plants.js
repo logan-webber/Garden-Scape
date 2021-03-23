@@ -23,3 +23,7 @@ export function addThePlant(plants){
         return res.body
     })
 }
+
+export function deleteThePlant(id, plants){
+    
+}
