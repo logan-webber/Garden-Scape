@@ -31,9 +31,9 @@ export function addOnePlant(plant) {
   }
 }
 
-export function deleteOnePlant(plant, id)
+export function deleteOnePlant(id)
   return dispatch => {
-    return deleteThePlant(pant).where('id', id)
+    return deleteThePlant(id)
     .then(() => {
       dispatch(fetchPlants())
       return null
