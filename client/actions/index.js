@@ -1,7 +1,8 @@
-import { getPlants, addThePlant } from '../apis/plants'
+import { getPlants, addThePlant, deleteThePlant } from '../apis/plants'
 
 export const SET_PLANTS = 'SET_PLANTS'
 export const ADD_PLANTS = 'ADD_PLANTS'
+export const DELETE_PLANTS = 'DELETE_PLANTS'
 
 export function setPlants (plants) {
   return {
@@ -30,4 +31,10 @@ export function addOnePlant(plant) {
   }
 }
 
-
+export function deleteOnePlant(plant, id)
+  return dispatch => {
+    return deleteThePlant(pant).where('id', id)
+    .then(() => {
+      dispatch(fetchPlants())
+      return null
+    })}
