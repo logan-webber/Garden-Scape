@@ -1,7 +1,7 @@
 import { getPlants, addThePlant } from '../apis/plants'
 
 export const SET_PLANTS = 'SET_PLANTS'
-export const ADD_PLANT = 'ADD_PLANTS'
+export const ADD_PLANTS = 'ADD_PLANTS'
 
 export function setPlants (plants) {
   return {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { addOnePlant } from '../actions/index'
-import { Link } from 'react-router-dom'
+import { Link, useHistory  } from 'react-router-dom'
 
 function AddPlant(props) {
 
@@ -19,6 +19,13 @@ function AddPlant(props) {
 		props.dispatch(addOnePlant({ species: formData.species, typeOf: formData.typeOf, origin: formData.origin, humidity: formData.humidity, temprature: formData.temprature, climate: formData.climate  }))
 		console.log('submitted data')
 	}
+
+	const history = useHistory()
+
+	const routeChange = () =>{ 
+		let path = `/`
+		history.push(path)
+	  }
 
 	const handleChange = (e) => {
 		e.persist()
@@ -42,7 +49,8 @@ function AddPlant(props) {
 					<input className='newPlant' type='text' name='temprature' placeholder='temprature' onChange={(e) => handleChange(e)} />
 					<input className='newPlant' type='text' name='climate' placeholder='climate' onChange={(e) => handleChange(e)} />
 				</label>
-				<button type='submit'>Submit</button>
+				<button onClick={() => routeChange()} type='submit'>Submit</button>
+				
 			</form>
 			<Link to='/'>back</Link>
 		</>
