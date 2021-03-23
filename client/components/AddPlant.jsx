@@ -24,7 +24,7 @@ function AddPlant(props) {
 	const history = useHistory()
 
 	const routeChange = () =>{ 
-		let path = `/`
+		let path = `/listofplants`
 		history.push(path)
 	  }
 
