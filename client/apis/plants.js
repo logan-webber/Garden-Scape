@@ -24,9 +24,8 @@ export function addThePlant(plants){
     })
 }
 
-export function deleteThePlant(id, plants){
-    return request.delete(rootUrl + '/plants' + id)
-    .send(plants)
+export function deleteThePlant(id, ){
+    return request.delete(rootUrl + '/plants/' + id)
     .then(res => {
         return res.body
     })
