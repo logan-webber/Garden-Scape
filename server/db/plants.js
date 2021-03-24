@@ -13,8 +13,8 @@ function addPlant (plant, db = connection){
         .then(ids => ids[0])
 }
 
-function deletePlant (plant, id, db = connection){
-    return db('plants').delete(plant).where('id', id)
+function deletePlant (id, db = connection){
+    return db('plants').delete().where('id', id)
     .then(rowCount => {
         console.log(rowCount)
         return rowCount
